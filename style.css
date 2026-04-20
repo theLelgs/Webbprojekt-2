@@ -13,6 +13,9 @@ nav{
     left:0;
     top:15vh;
     position: fixed;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 main{
     display: grid;
@@ -25,13 +28,19 @@ main{
 .ruta{
     background-color: #aaaaaa;
     width:auto;
-    height: 40vh;
+    height: 30vh;
     margin:1vh;
     margin-bottom: 0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 #logo1, #logo2, #void{
     height: 15vh;
+}
+#logo1, #logo2{
+    display:none
 }
 #credit
 {
@@ -69,3 +78,4 @@ footer{
     left: 90vw;
     position: fixed;
 }
+

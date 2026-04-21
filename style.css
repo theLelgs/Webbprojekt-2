@@ -34,7 +34,10 @@ main{
     display:flex;
     flex-direction: column;
     align-items: center;
-
+    img{
+    max-height: 10vh;
+    width: auto;    
+    }
 }
 #logo1, #logo2, #void{
     height: 15vh;
@@ -56,7 +59,6 @@ header{
     display:flex;
     justify-content: space-evenly;
     align-items: center;
-    
 }
 footer{
     position:fixed;
@@ -79,3 +81,21 @@ footer{
     position: fixed;
 }
 
+
+@media screen and ((min-width:641px) and (max-width:1007px)){
+    #logo1{
+        display:initial;
+    }   
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width:1008px){
+    #logo1, #logo2{
+        display:initial;
+    }
+    main{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

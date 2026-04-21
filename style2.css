@@ -6,6 +6,9 @@ body{
 #logo1, #logo2, #void{
     height: 15vh;
 }
+#void{
+
+}
 #logo1, #logo2{
     display:none;
 }
@@ -24,13 +27,7 @@ header{
     }
 }
 
-div{
-    display:flex;
-    background-color: #eaeaea;
-    margin:0.5vh;
-    align-items: center;
 
-}
 main{
     display: grid;
     grid-template-columns: 1fr;
@@ -39,9 +36,15 @@ main{
     margin-top:21vh;
     padding-bottom: 1vh;
     img{
-    max-height: 5vh;
-    max-width: 5vw;
-}
+        max-height: 5vh;
+        max-width: 5vw;
+    }
+    div{
+        display:flex;
+        background-color: #eaeaea;
+        margin:0.5vh;
+        align-items: center;
+    }
 }
 footer{
     position:fixed;

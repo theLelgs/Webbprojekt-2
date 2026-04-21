@@ -3,7 +3,24 @@ let ShoppingList = []
 function LoadShoppingList(){
     ShoppingList = JSON.parse(localStorage.getItem("ShoppingList"))
     console.log(ShoppingList.length)
-    ShoppingList.forEach(article => {
+    DrawShoppingList();
+}
+
+function DrawShoppingList(){
+    main.innerHTML="";
+
+    let titel = document.createElement("h1");
+    titel.textContent="Shopping Lista: "
+    let sum = document.createElement("h2")
+    sum.textContent="Sum: " + CalculateSum(ShoppingList)
+    
+    
+    main.appendChild(titel)
+    main.appendChild(sum)
+
+    for (let index = 0; index < ShoppingList.length; index++) {
+        const article = ShoppingList[index];
+        
         let div = document.createElement("div");
         
         let Title = document.createElement("h2");
@@ -21,22 +38,23 @@ function LoadShoppingList(){
         let Price = document.createElement("h3");
         Price.textContent=article.price+":-";
 
+        let Button = document.createElement("button")
+        Button.onclick=function(){RemoveFromShopping(index)}
+        Button.textContent="Remove"
+
         
+
 
         div.appendChild(Img);
         div.appendChild(Title)
         div.appendChild(Price)
+        div.appendChild(Button)
 
-
-        
         main.appendChild(div);
 
 
 
-    });
-    let total = document.createElement("h2")
-    total.textContent=CalculateSum();
-    main.appendChild(total)
+    };
 }
 
 function CalculateSum(articles){
@@ -44,12 +62,15 @@ function CalculateSum(articles){
     articles.forEach(element => {
         sum+=element.price;
     });
+    console.log(sum)
     return sum;
 }
 
 
-function RemoveFromShopping(article){
-    ShoppingList.splice(ShoppingList.indexOf(article))
+function RemoveFromShopping(index){
+    ShoppingList.splice(index, 1)
+    console.log("Tried deleting: " + index) 
+    DrawShoppingList();
 }
 
 

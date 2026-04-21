@@ -12,6 +12,10 @@ let article2 = {
     name:"Cup Galore"
 }
 
+let ShoppingList = []
+
+
+
 AddArticles(4)
 function AddArticles(input){
     for (let x = 0; x<input; x++)
@@ -20,6 +24,15 @@ function AddArticles(input){
         articles.push(article1);
         articles.push(article2);
     }
+}
+
+function AddToShoppingList(article){
+    ShoppingList.push(article)
+}
+
+
+function GoToShoppingList(){
+    
 }
 
 function LoadArticles(input){
@@ -46,10 +59,17 @@ function LoadArticles(input){
 
             let Price = document.createElement("h3");
             Price.textContent=article.price+":-";
-            
+
+            let Button = document.createElement("button")
+            Button.onclick= function(){AddToShoppingList(article)}
+           
+            Button.type="submit";
+            Button.textContent="Lägg till";
+
             div.appendChild(Title)
             div.appendChild(Image);
             div.appendChild(Price);
+            div.appendChild(Button)
             main.appendChild(div);
         }
     });

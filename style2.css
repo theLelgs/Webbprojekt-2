@@ -2,8 +2,12 @@ body{
 
 }
 
+
 #logo1, #logo2, #void{
     height: 15vh;
+}
+#logo1, #logo2{
+    display:none;
 }
 
 header{
@@ -13,8 +17,31 @@ header{
     width: 100vw;
     height: 15vh;
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+    h1{
+        position: absolute;
+    }
+}
+
+div{
+    display:flex;
+    background-color: #eaeaea;
+    margin:0.5vh;
+    align-items: center;
+
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #c8c8c8;
+    margin:1vh;
+    margin-top:21vh;
+    padding-bottom: 1vh;
+    img{
+    max-height: 5vh;
+    max-width: 5vw;
+}
 }
 footer{
     position:fixed;
@@ -38,4 +65,19 @@ footer{
 }
 header, footer{
     background-color: #d9d9d9;
+}
+
+
+
+@media screen and ((min-width:641px) and (max-width:1007px)){
+    #logo1{
+        display:initial;
+        padding-right: 50vw;
+    }   
+}
+
+@media screen and (min-width:1008px){
+    #logo1, #logo2{
+        display:initial;
+    }
 }

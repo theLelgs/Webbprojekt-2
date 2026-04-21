@@ -11,16 +11,16 @@ let article2 = {
     isTea:false,
     name:"Cup Galore"
 }
-
-let ShoppingList = []
-
-
+let ShoppingList = [];
+if (localStorage.getItem("ShoppingList")!=null)
+{
+    ShoppingList = JSON.parse(localStorage.getItem("ShoppingList"));
+}
 
 AddArticles(4)
 function AddArticles(input){
     for (let x = 0; x<input; x++)
     {
-        console.log("loop")
         articles.push(article1);
         articles.push(article2);
     }
@@ -32,7 +32,8 @@ function AddToShoppingList(article){
 
 
 function GoToShoppingList(){
-    
+    let list = JSON.stringify(ShoppingList)
+    localStorage.setItem("ShoppingList", list)
 }
 
 function LoadArticles(input){

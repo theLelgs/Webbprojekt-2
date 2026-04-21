@@ -16,6 +16,9 @@ nav{
     display:flex;
     align-items: center;
     justify-content: space-evenly;
+    button{
+        width:auto
+    }
 }
 main{
     display: grid;
@@ -57,8 +60,11 @@ header{
     width: 100vw;
     height: 15vh;
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+    h1{
+        position: absolute;
+    }
 }
 footer{
     position:fixed;
@@ -85,6 +91,7 @@ footer{
 @media screen and ((min-width:641px) and (max-width:1007px)){
     #logo1{
         display:initial;
+        padding-right: 50vw;
     }   
     main{
         grid-template-columns: 1fr 1fr;

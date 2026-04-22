@@ -76,6 +76,9 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    a{
+        font-size: 125%
+    }
 }
 #kundvagn{
     background-color: gray;

@@ -29,10 +29,10 @@ function DrawShoppingList(){
         let Img = document.createElement("img");
         if (article.isTea)
         {
-            Img.src="./img/SleepyTime.png"
+            Img.src="./img/SleepyTime.webp"
         }
         else {
-            Img.src = "./img/TeKopp.png"
+            Img.src = "./img/TeKopp.webp"
         }
 
         let Price = document.createElement("h3");

@@ -56,11 +56,11 @@ function LoadArticles(input){
             let Image = document.createElement("img")
             if (!article.isTea)
             {
-                Image.src = "./img/TeKopp.png"
+                Image.src = "./img/TeKopp.webp"
             }
             else
             {
-                Image.src = "./img/SleepyTime.png"
+                Image.src = "./img/SleepyTime.webp"
             }
             Image.alt = article.name
 

@@ -12,11 +12,11 @@ function DrawShoppingList(){
     let titel = document.createElement("h1");
     titel.textContent="Shopping Lista: "
     let sum = document.createElement("h2")
-    sum.textContent="Sum: " + CalculateSum(ShoppingList)
+    sum.textContent="Sum: " + CalculateSum(ShoppingList) + ":-";
     
     
     main.appendChild(titel)
-    main.appendChild(sum)
+    main.appendChild(sum) 
 
     for (let index = 0; index < ShoppingList.length; index++) {
         const article = ShoppingList[index];
@@ -66,10 +66,10 @@ function CalculateSum(articles){
     return sum;
 }
 
-
 function RemoveFromShopping(index){
     ShoppingList.splice(index, 1)
-    console.log("Tried deleting: " + index) 
+    console.log("Tried deleting: " + index)
+    localStorage.setItem("ShoppingList", JSON.stringify(ShoppingList)) 
     DrawShoppingList();
 }
 

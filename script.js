@@ -1,16 +1,12 @@
 let main = document.querySelector("main");
 
 let articles = [];
-let article1 = {
-    price:89,
-    isTea:true,
-    name:"Sleepy Time"
-}
-let article2 = {
-    price:119,
-    isTea:false,
-    name:"Cup Galore"
-}
+
+let teaNamesPartOne = ["Sleepy", "Energizing", "Calming", "Green"]
+let teaNamesPartTwo = ["Time", "Tea", "Deluxe", "Ultra"]
+let cupNamesPartOne = ["Cup", "Porcelain", "Luxury", "The Perfect"]
+let cupNamesPartTwo = ["Galore", "Deluxe", "Ultra", "Tea"]
+
 let ShoppingList = [];
 if (localStorage.getItem("ShoppingList")!=null)
 {
@@ -21,8 +17,18 @@ AddArticles(4)
 function AddArticles(input){
     for (let x = 0; x<input; x++)
     {
-        articles.push(article1);
-        articles.push(article2);
+        let teaArticle = {
+            price:Math.floor(Math.random()*40)+70,
+            isTea:true,
+            name:teaNamesPartOne[Math.floor(Math.random(0,1)*4)] + " " + teaNamesPartTwo[Math.floor(Math.random(0,1)*4)]
+        }
+        let cupArticle = {
+            price:Math.floor(Math.random()*50+80),
+            isTea:false,
+            name:cupNamesPartOne[[Math.floor(Math.random(0,1)*4)]] + " " + cupNamesPartTwo[[Math.floor(Math.random(0,1)*4)]]
+        }
+        articles.push(teaArticle);
+        articles.push(cupArticle);
     }
 }
 

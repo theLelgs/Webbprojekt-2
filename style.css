@@ -1,7 +1,15 @@
 body{
     display:flex;
     flex-direction: column;
-    
+}
+h1{
+    font-size: 1.5rem + 2vw;
+}
+h2{
+    font-size: 1rem + 1.5vw;
+}
+h3{        
+    font-size: 1rem + 1vw
 }
 header, footer{
     background-color: #d9d9d9;
@@ -63,6 +71,8 @@ header{
     justify-content: space-around;
     align-items: center;
     h1{
+        align-self:center;
+        top:7vh;
         position: absolute;
     }
 }
@@ -84,9 +94,11 @@ footer{
     background-color: gray;
     border-radius: 5px;
     padding:5px;
-    height:7.5vh;
-    top:3vh;
-    left: 90vw;
+    height:5vh;
+    padding-left:30vw;
+    padding-right:30vw;
+    top:1vh;
+    left: 15vw;
     position: fixed;
 }
 
@@ -94,8 +106,15 @@ footer{
 @media screen and ((min-width:641px) and (max-width:1007px)){
     #logo1{
         display:initial;
-        padding-right: 50vw;
+        padding-right: 60vw;
     }   
+    #kundvagn
+    {
+        left:75vw;
+        top:3vh;
+        padding:5px;
+        height:7.5vh;
+    }
     main{
         grid-template-columns: 1fr 1fr;
     }
@@ -104,6 +123,12 @@ footer{
 @media screen and (min-width:1008px){
     #logo1, #logo2{
         display:initial;
+    }
+    #kundvagn{
+        left: 90vw;
+        top:3vh;
+        padding:5px;
+        height:7.5vh;
     }
     main{
         grid-template-columns: 1fr 1fr 1fr;

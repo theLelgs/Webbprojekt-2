@@ -13,7 +13,7 @@ if (localStorage.getItem("ShoppingList")!=null)
     ShoppingList = JSON.parse(localStorage.getItem("ShoppingList"));
 }
 
-AddArticles(15)
+AddArticles(30)
 function AddArticles(input){
     for (let x = 0; x<input; x++)
     {

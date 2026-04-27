@@ -1,13 +1,5 @@
-body{
-
-}
-
-
 #logo1, #logo2, #void{
     height: 15vh;
-}
-#void{
-
 }
 #logo1, #logo2{
     display:none;

@@ -1,8 +1,10 @@
-#logo1, #logo2, #void{
+#void{
     height: 15vh;
 }
 #logo1, #logo2{
     display:none;
+    width:15vw;
+    height: auto;
 }
 
 header{
@@ -15,6 +17,8 @@ header{
     justify-content: space-around;
     align-items: center;
     h1{
+        align-self:center;
+        top:5vh;
         position: absolute;
     }
 }
@@ -57,9 +61,11 @@ footer{
     background-color: gray;
     border-radius: 5px;
     padding:5px;
-    height:7.5vh;
-    top:3vh;
-    left: 90vw;
+    height:5vh;
+    padding-left:30vw;
+    padding-right:30vw;
+    top:1vh;
+    left: 15vw;
     position: fixed;
 }
 header, footer{
@@ -71,12 +77,34 @@ header, footer{
 @media screen and ((min-width:641px) and (max-width:1007px)){
     #logo1{
         display:initial;
-        padding-right: 50vw;
+        padding-right: 60vw;
+        width: 15vw;
     }   
+    #home
+    {
+        left:75vw;
+        top:3vh;
+        padding:5px;
+        height:7.5vh;
+    }
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media screen and (min-width:1008px){
     #logo1, #logo2{
         display:initial;
+        height:18vh;
+        width:auto;
+    }
+    #home{
+        left: 90vw;
+        top:3vh;
+        padding:5px;
+        height:7.5vh;
+    }
+    main{
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }

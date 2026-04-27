@@ -50,11 +50,12 @@ main{
     width: auto;    
     }
 }
-#logo1, #logo2, #void{
-    height: 15vh;
+#void{
+    height:15vh
 }
 #logo1, #logo2{
-    display:none
+    display:none;
+    width:15vw;
 }
 #credit
 {
@@ -72,7 +73,7 @@ header{
     align-items: center;
     h1{
         align-self:center;
-        top:7vh;
+        top:5vh;
         position: absolute;
     }
 }
@@ -107,6 +108,7 @@ footer{
     #logo1{
         display:initial;
         padding-right: 60vw;
+        width:15vw
     }   
     #kundvagn
     {
@@ -123,6 +125,8 @@ footer{
 @media screen and (min-width:1008px){
     #logo1, #logo2{
         display:initial;
+        height:18vh;
+        width:auto;
     }
     #kundvagn{
         left: 90vw;
